@@ -1,3 +1,10 @@
 # Data
 /data
 *.csv
+
+# VSCode
+/.vscode
+
+# PyTest Cache
+/.pytest_cache
+**/__pycache__
