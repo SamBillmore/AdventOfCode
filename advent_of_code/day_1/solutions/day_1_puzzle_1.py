@@ -22,8 +22,9 @@ def count_depth_increase_from_previous_measurement(list_of_measurements: List) -
         previous_measurement = measurement
     return count
 
+
 if __name__ == "__main__":
-    filepath = "./advent_of_code/day_1_puzzle_1/data/day_1_puzzle_1.csv"
+    filepath = "./advent_of_code/day_1/data/day_1_puzzle_1.csv"
     list_of_measurements = get_data(filepath)
     count_increase = count_depth_increase_from_previous_measurement(list_of_measurements)
     print(f"Number of depth increases: {count_increase}")

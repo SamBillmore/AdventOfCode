@@ -8,3 +8,6 @@
 # PyTest Cache
 /.pytest_cache
 **/__pycache__
+
+# .egg-info
+*.egg-info
