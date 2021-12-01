@@ -1,4 +1,4 @@
-from advent_of_code.day_1_puzzle_1.solution.day_1_puzzle_1 import count_depth_increase_from_previous_measurement
+from advent_of_code.day_1.solutions.day_1_puzzle_1 import count_depth_increase_from_previous_measurement
 
 
 def test_count_depth_increase_from_previous_measurement():
