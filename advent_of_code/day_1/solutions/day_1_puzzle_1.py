@@ -1,13 +1,5 @@
 from typing import List
-import pandas as pd
-
-
-def get_data(filepath: str) -> List:
-    """ 
-    """
-    data_df = pd.read_csv(filepath, header=None)
-    data_list = list(data_df.iloc[:, 0])
-    return data_list
+from advent_of_code.utils.get_data import get_data
 
 
 def count_depth_increase_from_previous_measurement(list_of_measurements: List) -> int:
@@ -24,7 +16,7 @@ def count_depth_increase_from_previous_measurement(list_of_measurements: List) -
 
 
 if __name__ == "__main__":
-    filepath = "./advent_of_code/day_1/data/day_1_puzzle_1.csv"
+    filepath = "./advent_of_code/data/day_1_data.csv"
     list_of_measurements = get_data(filepath)
     count_increase = count_depth_increase_from_previous_measurement(list_of_measurements)
     print(f"Number of depth increases: {count_increase}")
