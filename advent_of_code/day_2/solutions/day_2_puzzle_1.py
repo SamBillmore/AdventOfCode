@@ -17,6 +17,7 @@ def final_position(data_list : List) -> int:
             depth = depth - int(split_command[1])
     return horizontal_position * depth
 
+
 if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_2_data.csv"
     list_of_measurements = get_data(filepath)
