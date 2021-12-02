@@ -9,7 +9,7 @@ def test_final_position():
     actual = final_position(test_data)
 
     # Then the output is as expected
-    expected_depth = 5 + 8 + 1 + 1
-    expected_horizontal = 7 + 1 + 9 - 4
+    expected_horizontal = 5 + 8 + 1 + 1
+    expected_depth = 7 + 1 + 9 - 4
     expected = expected_depth * expected_horizontal
     assert actual == expected
