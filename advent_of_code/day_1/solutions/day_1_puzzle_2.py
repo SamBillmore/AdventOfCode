@@ -25,7 +25,7 @@ def three_measurement_windows(list_of_measurements: List) -> int:
 
 
 if __name__ == "__main__":
-    filepath = "./advent_of_code/day_1/data/day_1_puzzle_1.csv"
+    filepath = "./advent_of_code/day_1/data/day_1_data.csv"
     list_of_measurements = get_data(filepath)
     count_increase = three_measurement_windows(list_of_measurements)
     print(f"Number of depth increases: {count_increase}")
