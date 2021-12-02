@@ -1,5 +1,4 @@
 from typing import List
-import pandas as pd
 
 from advent_of_code.utils.get_data import get_data
 
