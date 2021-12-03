@@ -29,6 +29,6 @@ def test_get_binary_data():
     # When we run the function
     actual = get_binary_data(filepath)
 
-    # The output is as expected
+    # Then the output is as expected
     expected = [b'000110010001', b'101000110000', b'000110010111']
     assert actual[:3] == expected
