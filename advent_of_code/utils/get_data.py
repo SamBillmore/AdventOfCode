@@ -1,4 +1,5 @@
 from typing import List
+import numpy as np
 import pandas as pd
 
 
@@ -18,3 +19,9 @@ def get_binary_data(filepath: str):
         while (byte := f.read(13)):
             byte_list.append(byte[:12])
     return byte_list
+
+
+def get_data_from_txt(filepath: str):
+    """ 
+    """
+    return list(np.loadtxt(filepath, delimiter='\n', skiprows=0, dtype=str))
