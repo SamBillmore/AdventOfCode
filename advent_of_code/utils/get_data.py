@@ -11,7 +11,7 @@ def get_csv_data(filepath: str) -> List:
     return data_list
 
 
-def get_binary_data(filepath: str):
+def get_binary_data(filepath: str) -> List:
     """ 
     """
     byte_list = []
@@ -21,7 +21,7 @@ def get_binary_data(filepath: str):
     return byte_list
 
 
-def get_data_from_txt(filepath: str):
+def get_data_from_txt(filepath: str) -> List:
     """ 
     """
     return list(np.loadtxt(filepath, delimiter='\n', skiprows=0, dtype=str))
