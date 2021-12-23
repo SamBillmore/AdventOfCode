@@ -3,12 +3,10 @@ import numpy as np
 import pandas as pd
 
 
-def get_csv_data(filepath: str) -> List:
+def get_csv_data(filepath: str) -> pd.DataFrame:
     """ 
     """
-    data_df = pd.read_csv(filepath, header=None)
-    data_list = list(data_df.iloc[:, 0])
-    return data_list
+    return pd.read_csv(filepath, header=None)
 
 
 def get_binary_data(filepath: str) -> List:

@@ -1,5 +1,6 @@
 from typing import List
 from advent_of_code.utils.get_data import get_csv_data
+from advent_of_code.day_1.solutions.day_1_puzzle_1 import data_munging
 
 
 def final_position(data_list : List) -> int:
@@ -20,6 +21,7 @@ def final_position(data_list : List) -> int:
 
 if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_2_data.csv"
-    list_of_measurements = get_csv_data(filepath)
+    input_data = get_csv_data(filepath)
+    list_of_measurements = data_munging(input_data)
     depth_by_horiz = final_position(list_of_measurements)
     print(f"Final output: {depth_by_horiz}")
