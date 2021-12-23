@@ -1,7 +1,7 @@
 from numpy import exp
 import pandas as pd
 
-from advent_of_code.day_5.solutions.day_5_puzzle_1 import data_munging, create_blank_diagram, update_diagram, count_overlapping_lines
+from advent_of_code.day_5.solutions.day_5_puzzle_1 import data_munging, create_blank_diagram, update_diagram_horiz_vert, count_overlapping_lines
 
 
 def test_data_munging():
@@ -38,7 +38,7 @@ def test_create_blank_diagram():
     pd.testing.assert_frame_equal(actual, expected)
 
 
-def test_update_diagram():
+def test_update_diagram_horiz_vert():
     # Given some input data
     test_munged_data = [((0,2),(0,3)),
                         ((1,1),(4,4)),
@@ -48,7 +48,7 @@ def test_update_diagram():
     )
 
     # When we run the function
-    actual = update_diagram(test_munged_data, test_blank_diagram)
+    actual = update_diagram_horiz_vert(test_munged_data, test_blank_diagram)
 
     # Then the output is as expected
     expected = pd.DataFrame(

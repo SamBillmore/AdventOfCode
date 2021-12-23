@@ -39,7 +39,7 @@ def create_blank_diagram(munged_data: List[Tuple[Tuple]]) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-def update_diagram(munged_data: List[Tuple[Tuple]], current_diagram: pd.DataFrame) -> pd.DataFrame:
+def update_diagram_horiz_vert(munged_data: List[Tuple[Tuple]], current_diagram: pd.DataFrame) -> pd.DataFrame:
     """
     """
     for row in munged_data:
@@ -73,6 +73,6 @@ if __name__ == "__main__":
     input_data = get_data_from_txt(filepath)
     munged_data = data_munging(input_data)
     blank_diagram = create_blank_diagram(munged_data)
-    current_diagram = update_diagram(munged_data, blank_diagram)
+    current_diagram = update_diagram_horiz_vert(munged_data, blank_diagram)
     output = count_overlapping_lines(current_diagram)
     print(f"Final output: {output}")
