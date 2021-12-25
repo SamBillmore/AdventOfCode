@@ -1,16 +1,4 @@
-from advent_of_code.day_6.solutions.day_6_puzzle_1 import data_munging, single_fish_iteration, iterate_fish, count_fish
-
-
-def test_data_munging():
-    # Given some input data
-    input_data = ['1,2,3,4,5']
-
-    # When we run the funtion
-    actual = data_munging(input_data)
-
-    # Then the output is as expected
-    expected = [1,2,3,4,5]
-    assert actual == expected
+from advent_of_code.day_6.solutions.day_6_puzzle_1 import single_fish_iteration, iterate_fish, count_fish
 
 
 def test_single_fish_iteration():
