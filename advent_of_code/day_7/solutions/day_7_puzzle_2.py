@@ -1,4 +1,5 @@
 from typing import List
+from tqdm import tqdm
 
 from advent_of_code.utils.get_data import get_csv_data_single_row
 
@@ -22,14 +23,19 @@ def _calculate_triangle_number(input_number: int) -> int:
     return output
 
 
-def find_position(input_data: List) -> int:
+def find_fuel_for_best_position(input_data: List) -> int:
     """
     """
-    pass
+    min_fuel = calculate_fuel_2(input_data, min(input_data))
+    for position in tqdm(range(min(input_data), max(input_data) + 1)):
+        fuel_used = calculate_fuel_2(input_data, position)
+        if fuel_used < min_fuel:
+            min_fuel = fuel_used
+    return min_fuel
 
 
 if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_7_data.csv"
     crab_data = get_csv_data_single_row(filepath)
-    output = find_position(crab_data)
+    output = find_fuel_for_best_position(crab_data)
     print(f"Final output: {output}")
