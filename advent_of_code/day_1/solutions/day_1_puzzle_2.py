@@ -1,7 +1,6 @@
 from typing import List
 
-from advent_of_code.utils.get_data import get_csv_data
-from advent_of_code.day_1.solutions.day_1_puzzle_1 import data_munging
+from advent_of_code.utils.get_data import get_csv_data_single_column
 
 
 def three_measurement_windows(list_of_measurements: List) -> int:
@@ -26,7 +25,6 @@ def three_measurement_windows(list_of_measurements: List) -> int:
 
 if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_1_data.csv"
-    input_data = get_csv_data(filepath)
-    list_of_measurements = data_munging(input_data)
+    list_of_measurements = get_csv_data_single_column(filepath)
     count_increase = three_measurement_windows(list_of_measurements)
     print(f"Number of depth increases: {count_increase}")

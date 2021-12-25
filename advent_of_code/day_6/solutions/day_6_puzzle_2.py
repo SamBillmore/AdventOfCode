@@ -2,8 +2,7 @@ from typing import List
 import math
 import numpy as np
 
-from advent_of_code.utils.get_data import get_csv_data
-from advent_of_code.day_6.solutions.day_6_puzzle_1 import data_munging, iterate_fish, count_fish
+from advent_of_code.utils.get_data import get_csv_data_single_row
 
 
 def iterate_fish_version_2(fish_data: List, iterations: int) -> List:
@@ -18,7 +17,6 @@ def iterate_fish_version_2(fish_data: List, iterations: int) -> List:
 
     # Iterate
     for i in range(0,iterations):
-        print(f'# {i + 1} of {iterations}')
         days_to_spawn_list_2 = [0,0,0,0,0,0,0,0,0]
         for i in range(0,8):
             days_to_spawn_list_2[i] = days_to_spawn_list[i + 1]
@@ -32,7 +30,6 @@ def iterate_fish_version_2(fish_data: List, iterations: int) -> List:
 
 if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_6_data.csv"
-    input_data = get_csv_data(filepath)
-    fish_data = data_munging(input_data)
+    fish_data = get_csv_data_single_row(filepath)
     output = iterate_fish_version_2(fish_data, iterations=256)
     print(f"Final output: {output}")

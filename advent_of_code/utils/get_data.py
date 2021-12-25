@@ -9,6 +9,20 @@ def get_csv_data(filepath: str) -> pd.DataFrame:
     return pd.read_csv(filepath, header=None)
 
 
+def get_csv_data_single_row(filepath: str) -> List:
+    """
+    """
+    input_data = get_csv_data(filepath)
+    return list(input_data.iloc[0, :])
+
+
+def get_csv_data_single_column(filepath: str) -> List:
+    """
+    """
+    input_data = get_csv_data(filepath)
+    return list(input_data.iloc[:, 0])
+
+
 def get_binary_data(filepath: str) -> List:
     """ 
     """
