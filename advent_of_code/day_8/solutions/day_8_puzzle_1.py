@@ -16,7 +16,7 @@ def data_munging(input_data: List) -> List:
     return output_data
 
 
-def count_1_4_7_8(segment_data):
+def count_1_4_7_8(segment_data: List) -> int:
     """
     """
     unique_digit_lengths = [2,3,4,7]
