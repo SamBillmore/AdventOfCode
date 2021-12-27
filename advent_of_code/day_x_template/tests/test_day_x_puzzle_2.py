@@ -6,6 +6,8 @@ def test_template():
     input_data = ''
 
     # When the function is called
+    actual = ''
 
     # Then the output is as expected
     expected = ''
+    assert actual == expected
