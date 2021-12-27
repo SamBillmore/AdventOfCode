@@ -35,7 +35,7 @@ def check_corrupted_single_row(row: str) -> Optional[str]:
     return None
 
 
-def calculate_score(corrupted_characters: List[str]) -> int:
+def calculate_syntax_checker_score(corrupted_characters: List[str]) -> int:
     score_lookup_dict = {
         ')': 3,
         ']': 57,
@@ -52,5 +52,5 @@ if __name__ == "__main__":
     filepath = "./advent_of_code/data/day_10_data.txt"
     input_data = get_data_from_txt(filepath)
     corrupted_characters = check_corrupted(input_data)
-    output = calculate_score(corrupted_characters)
+    output = calculate_syntax_checker_score(corrupted_characters)
     print(f"Final output: {output}")

@@ -1,4 +1,4 @@
-from advent_of_code.day_10.solutions.day_10_puzzle_1 import check_corrupted, calculate_score
+from advent_of_code.day_10.solutions.day_10_puzzle_1 import check_corrupted, calculate_syntax_checker_score
 
 
 def test_check_corrupted():
@@ -30,7 +30,7 @@ def test_check_corrupted():
     assert actual == expected
 
 
-def test_calculate_score():
+def test_calculate_syntax_checker_score():
     # Given some input data
     input_data = [
         '}',
@@ -41,7 +41,7 @@ def test_calculate_score():
     ]
 
     # When the function is called
-    actual = calculate_score(input_data)
+    actual = calculate_syntax_checker_score(input_data)
 
     # Then the output is as expected
     expected = 26397
