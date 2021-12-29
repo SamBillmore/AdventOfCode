@@ -55,9 +55,7 @@ def count_valid_routes(input_edges: List[List[str]]) -> List[List[str]]:
     
     filtered_routes = []
     start_of_route = ['start']
-    print('Finding routes')
     find_all_routes(input_edges, start_of_route)
-    print('Filtering routes')
     for route in EXISTING_ROUTES:
         lower_case_nodes = []
         for node in route:
