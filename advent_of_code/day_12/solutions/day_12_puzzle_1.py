@@ -36,6 +36,8 @@ def find_all_routes(available_edges: List[List[str]], current_route: List):
             # Remove edge from available edges
             updated_available_edges = available_edges.copy()
             updated_available_edges.remove(edge)
+            # Remove other edges that are now no longer possible 
+            # (as not allowed to revisit lowercase nodes more than once)
             if edge[1].lower() == edge[1]:
                 for available_edge in updated_available_edges:
                     if available_edge[1] == edge[1]:
