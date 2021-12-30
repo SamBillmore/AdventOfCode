@@ -1,4 +1,6 @@
 from typing import Dict, List, Tuple
+from tqdm import tqdm
+
 from advent_of_code.utils.get_data import get_data_from_txt
 
 
@@ -35,7 +37,7 @@ def iterate_insert_into_pairs(number_of_iters: int, starting_string: str, pair_i
             count_dict[letter] = count_dict[letter] + 1
         else:
             count_dict[letter] = 1
-    for _ in range(0, number_of_iters):
+    for _ in tqdm(range(0, number_of_iters)):
         starting_string, count_dict = insert_into_pairs(starting_string, pair_insertions, count_dict)
     return starting_string, count_dict
 
@@ -43,7 +45,7 @@ def iterate_insert_into_pairs(number_of_iters: int, starting_string: str, pair_i
 def find_most_and_least_common_delta(count_dict: Dict[str, int]):
     max_value = max(count_dict.values())
     min_value = min(count_dict.values())
-    return max_value - min_value
+    return int(max_value - min_value)
 
 
 if __name__ == "__main__":
