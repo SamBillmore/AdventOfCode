@@ -25,15 +25,3 @@ def test_calculate_shortest_path():
     # Then the output is as expected
     expected = 40
     assert actual == expected
-
-
-def test_template():
-    # Given some input data
-    input_data = ''
-
-    # When the function is called
-    actual = ''
-
-    # Then the output is as expected
-    expected = ''
-    assert actual == expected
