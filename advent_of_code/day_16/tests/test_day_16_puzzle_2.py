@@ -35,8 +35,3 @@ def test_apply_all_operations_1():
     # Then the output is as expected
     expected = 1
     assert actual == expected
-
-
-[{'total_length_of_sub_packets': 33, 'operation': 'sum', 'packet_length': 22}, {'value': 2, 'operation': 'literal value', 'packet_length': 11}, {'value': 4, 'operation': 'literal value', 'packet_length': 11}, {'value': 9, 'operation': 'literal value', 'packet_length': 11}, {'value': 20338968, 'operation': 'literal value', 'packet_length': 86}]
-[{'total_length_of_sub_packets': 33, 'operation': 'sum', 'packet_length': 22}, {'value': 10, 'operation': 'literal value', 'packet_length': 11}, {'value': 15, 'operation': 'literal value', 'packet_length': 11}, {'value': 14, 'operation': 'literal value', 'packet_length': 11}, {'value': 24, 'operation': 'literal value', 'packet_length': 51}, {'value': 15, 'operation': 'literal value', 'packet_length': 55}]
-[{'total_length_of_sub_packets': 161, 'operation': 'product', 'packet_length': 22}, {'value': 39, 'operation': 'literal value', 'packet_length': 55}, {'value': 15, 'operation': 'literal value', 'packet_length': 55}]
