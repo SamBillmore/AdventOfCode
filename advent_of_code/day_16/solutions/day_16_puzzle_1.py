@@ -1,5 +1,4 @@
-from typing import List, Tuple
-import typing
+from typing import Tuple
 
 from advent_of_code.utils.get_data import get_csv_data_single_row
 
